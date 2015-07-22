@@ -10,7 +10,12 @@
 </head>
 <body>
 	<h1>The HackerYou Tuber Individual!</h1>
-	<div class="gallery js-flickity" data-flickity-options='{ "cellAlign": "right", "imagesLoaded": true, "wrapAround": true }' >
+	<div class="refresh">
+		<a href="#" id="refresh-btn">Refresh</a>
+	</div>
+	
+
+	<div class="gallery js-flickity" data-flickity-options='{ "cellAlign": "center", "imagesLoaded": true, "wrapAround": true }' >
 	  <div class="gallery-cell tuber1"></div>
 	  <div class="gallery-cell tuber2"></div>
 	  <div class="gallery-cell tuber3"></div>
@@ -49,6 +54,10 @@
 	    <div>
 	      <ul>
 	        <li><div class="hat drag"></div></li>
+	        <li><div class="hat2 drag"></div></li>
+	        <li><div class="hat3 drag"></div></li>
+	        <li><div class="hat4 drag"></div></li>
+	        <li><div class="hat5 drag"></div></li>
 	      </ul>
 	    </div>
 	    <h2><a href="#">Eyes</a></h2>
@@ -56,17 +65,41 @@
 	      <ul>
 	        <li><div class="eye1 drag"></div></li>
 	        <li><div class="eye2 drag"></div></li>
+	        <li><div class="eye3 drag"></div></li>
+	        <li><div class="eye4 drag"></div></li>
+	        <li><div class="eye5 drag"></div></li>
+	        <li><div class="eye6 drag"></div></li>
 	      </ul>
 	    </div>
 	    <h2><a href="#">Noses</a></h2>
 	    <div>
 	      <ul>
 	        <li><div class="nose drag"></div></li>
+	        <li><div class="nose2 drag"></div></li>
+	        <li><div class="nose3 drag"></div></li>
+	        <li><div class="nose4 drag"></div></li>
+	        <li><div class="nose5 drag"></div></li>
+	      </ul>
+	    </div>
+	    <h2><a href="#">Mouths</a></h2>
+	    <div>
+	      <ul>
+	        <li><div class="mouth drag"></div></li>
+	        <li><div class="mouth2 drag"></div></li>
+	        <li><div class="mouth3 drag"></div></li>
+	        <li><div class="mouth4 drag"></div></li>
+	        <li><div class="mouth5 drag"></div></li>
+	        <li><div class="mouth6 drag"></div></li>
+	      </ul>
+	    </div>
+	    <h2><a href="#">Hands</a></h2>
+	    <div>
+	      <ul>
+	        <li><div class="hand drag"></div></li>
 	      </ul>
 	    </div>
 	  </div>
 	</div>
-
 
 
 	<!-- Scripts -->
@@ -76,19 +109,40 @@
 
 	<!-- JavaScript -->
 	<script>
-		$(".drag").draggable();
-		$(function() {
-		    $( "#accordion" ).accordion({});
-		  });
+		// $(".drag").draggable();
+		// $(function() {
+		//     $( "#accordion" ).accordion({});
+		//   });
+		$('#refresh-btn').click(function() {
+		    location.reload();
+		});
 
-		$( "#catalog" ).accordion();
-	    $( "#catalog .drag" ).draggable({
-	      appendTo: ".gallery",
-	      helper: "clone",
-	    });
-	    $('.drag').bind('dragstop', function(event, ui) {
-	        $(this).after($(ui.helper).clone().draggable());
-	    });
+		$(function() {	
+			// $( "#catalog" ).accordion();
+		    $( "#catalog .drag" ).draggable({
+		      appendTo: "body",
+		      helper: "clone",
+		    });
+		    $('.drag').bind('dragstop', function(event, ui) {
+		        $(this).after($(ui.helper).clone().draggable());
+		    });
+		    // $( "#cart ol" ).droppable({
+		    //   activeClass: "ui-state-default",
+		    //   hoverClass: "ui-state-hover",
+		    //   accept: ":not(.ui-sortable-helper)",
+		    //   drop: function( event, ui ) {
+		    //     $( this ).find( ".placeholder" ).remove();
+		    //     $( "<li></li>" ).html( ui.draggable.html() ).appendTo( this );
+		    //   }
+		    // }).sortable({
+		    //   items: "li:not(.placeholder)",
+		    //   sort: function() {
+		    //     // gets added unintentionally by droppable interacting with sortable
+		    //     // using connectWithSortable fixes this, but doesn't allow you to customize active/hoverClass options
+		    //     $( this ).removeClass( "ui-state-default" );
+		    //   }
+		    // });
+		});
 	</script>	
 </body>
 </html>

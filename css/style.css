@@ -3,24 +3,10 @@ body h1 {
 }
 li {
 	list-style: none;
+	display: inline-block;
 }
-.right {
-	float:right;
-}
-.box1 {
-	width: 100px;
-	height: 100px;
-	background: red;
-}
-.box2 {
-	width: 100px;
-	height: 100px;
-	background: blue;
-}
-.box3 {
-	width: 100px;
-	height: 100px;
-	background: green;
+.refresh {
+	text-align: center;
 }
 .tuber1 {
 	background: url(https://timedotcom.files.wordpress.com/2014/11/potato.jpg?quality=65&strip=color&w=814) no-repeat center;
@@ -57,46 +43,111 @@ li {
 	top: 500px;
 	right: 400px;
 }
+/*Hats*/
 .hat {
 	background: url(../images/hat.png) no-repeat;
-	background-size: contain;
-	height: 100px;
-	width: 100px;
-}
-.hand {
-	background: url(http://pngimg.com/upload/hands_PNG905.png) no-repeat;
-	background-size: contain;
-	height: 100px;
-	width: 100px;
 
 }
+.hat2 {
+	background: url(../images/hat2.png) no-repeat;
+
+}
+.hat3 {
+	background: url(../images/hat3.png) no-repeat;
+
+}
+.hat4 {
+	background: url(../images/hat4.png) no-repeat;
+
+}
+.hat5 {
+	background: url(../images/hat5.png) no-repeat;
+
+}
+/*Eyes*/
 .eye1 {
-	background: url(http://i.ytimg.com/vi/GMGSw3GDyJQ/maxresdefault.jpg) no-repeat;
-	background-size: contain;
-	height: 100px;
-	width: 100px;
+	background: url(../images/eye1.png) no-repeat;
+
 }
 .eye2 {
-	background: url(../images/eye-02.jpg) no-repeat;
-	background-size: contain;
-	height: 100px;
-	width: 100px;
+	background: url(../images/eye2.png) no-repeat;
+
 }
+.eye3 {
+	background: url(../images/eye3.png) no-repeat;
+
+}
+.eye4 {
+	background: url(../images/eye4.png) no-repeat;
+
+}
+.eye5 {
+	background: url(../images/eye5.png) no-repeat;
+
+}
+.eye6 {
+	background: url(../images/eye6.png) no-repeat;
+
+}
+
+/*Nose*/
 .nose {
 	background: url(../images/nose.png) no-repeat;
-	background-size: contain;
-	height: 100px;
-	width: 100px;
+
 }
+.nose2 {
+	background: url(../images/nose2.png) no-repeat;
+
+}
+.nose3 {
+	background: url(../images/nose3.png) no-repeat;
+
+}
+.nose4 {
+	background: url(../images/nose4.png) no-repeat;
+
+}
+.nose5 {
+	background: url(../images/nose5.png) no-repeat;
+
+}
+
+/*Mouth*/
 .mouth {
 	background: url(../images/mouth.png) no-repeat;
+
+}
+.mouth2 {
+	background: url(../images/mouth2.png) no-repeat;
+
+}
+.mouth3 {
+	background: url(../images/mouth3.png) no-repeat;
+
+}
+.mouth4 {
+	background: url(../images/mouth4.png) no-repeat;
+
+}
+.mouth5 {
+	background: url(../images/mouth5.png) no-repeat;
+
+}
+.mouth6 {
+	background: url(../images/mouth6.png) no-repeat;
+
+}
+
+/*Hands*/
+.hand {
+	background: url(http://pngimg.com/upload/hands_PNG905.png) no-repeat;
+}
+
+.drag {
+	display: inline-block;
 	background-size: contain;
 	height: 100px;
 	width: 100px;
-}
-.drag {
-	display: inline-block;
-	/*float: right;*/
 }
 .gallery {
 	height: 600px;
