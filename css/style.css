@@ -1,6 +1,12 @@
 body h1 {
 	text-align: center;
 }
+li {
+	list-style: none;
+}
+.right {
+	float:right;
+}
 .box1 {
 	width: 100px;
 	height: 100px;
@@ -90,9 +96,11 @@ body h1 {
 }
 .drag {
 	display: inline-block;
+	/*float: right;*/
 }
 .gallery {
 	height: 600px;
+	/*width: 80%;*/
 	/*background: grey;*/
 }
 .gallery-cell {

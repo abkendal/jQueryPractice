@@ -10,19 +10,62 @@
 </head>
 <body>
 	<h1>The HackerYou Tuber Individual!</h1>
-	<div class="gallery js-flickity" data-flickity-options='{ "cellAlign": "right", "imagesLoaded": true}'>
+	<div class="gallery js-flickity" data-flickity-options='{ "cellAlign": "right", "imagesLoaded": true, "wrapAround": true }' >
 	  <div class="gallery-cell tuber1"></div>
 	  <div class="gallery-cell tuber2"></div>
 	  <div class="gallery-cell tuber3"></div>
 	</div>
 	<!-- Boxes -->
-	<div class="hat drag"></div>
-	<div class="hand drag"></div>
-	<div class="hand drag"></div>
-	<div class="eye1 drag"></div>
-	<div class="eye2 drag"></div>
-	<div class="nose drag"></div>
-	<div class="mouth drag"></div>
+
+<!-- 	<div id="accordion">
+	  <h3>Hats</h3>
+	  <div>
+	  	<div class="hat drag"></div>
+	  </div>
+	  <h3>Eyes</h3>
+	  <div>
+	  	<div class="eye1 drag"></div>
+	  	<div class="eye2 drag"></div>
+	  </div>
+	  <h3>Noses</h3>
+	  <div>
+	  	<div class="nose drag"></div>	
+	  </div>
+	  <h3>Mouths</h3>
+	  <div>
+	  	<div class="mouth drag"></div>
+	  </div>
+	  <h3>Hands</h3>
+	  <div>
+	  	<div class="hand drag"></div>
+	  	<div class="hand drag"></div>
+	  </div>
+	</div> -->
+
+	<div id="parts">
+	  <h1 class="ui-widget-header">Parts</h1>
+	  <div id="catalog">
+	    <h2><a href="#">Hats</a></h2>
+	    <div>
+	      <ul>
+	        <li><div class="hat drag"></div></li>
+	      </ul>
+	    </div>
+	    <h2><a href="#">Eyes</a></h2>
+	    <div>
+	      <ul>
+	        <li><div class="eye1 drag"></div></li>
+	        <li><div class="eye2 drag"></div></li>
+	      </ul>
+	    </div>
+	    <h2><a href="#">Noses</a></h2>
+	    <div>
+	      <ul>
+	        <li><div class="nose drag"></div></li>
+	      </ul>
+	    </div>
+	  </div>
+	</div>
 
 
 
@@ -33,15 +76,26 @@
 
 	<!-- JavaScript -->
 	<script>
-		$(".drag").draggable({
-			// snap: true
-		});
-		// $(".gallery-cell").droppable({
-		// 	accept: ".drag",
-		// 	activeClass: "ui-state-highlight",
-		// 	drop: function() {
-		// 	    alert( "dropped" )}
-		// });
+		$(".drag").draggable();
+		$(function() {
+		    $( "#accordion" ).accordion({});
+		  });
+
+		$( "#catalog" ).accordion();
+	    $( "#catalog .drag" ).draggable({
+	      appendTo: ".gallery",
+	      helper: "clone",
+	    });
+	    $('.drag').bind('dragstop', function(event, ui) {
+	        $(this).after($(ui.helper).clone().draggable());
+	    });
 	</script>	
 </body>
 </html>
+
+
+
+
+
+
+
