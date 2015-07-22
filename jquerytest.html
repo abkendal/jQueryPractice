@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Having fun with jQuery</title>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<!-- Boxes -->
+	<div class="potato"></div>
+	<div class="hat drag"></div>
+	<div class="hand drag"></div>
+	<div class="hand drag"></div>
+	<div class="eye1 drag"></div>
+	<div class="eye2 drag"></div>
+	<div class="nose drag"></div>
+	<div class="mouth drag"></div>
+
+
+	<script src="jquery-ui/external/jquery/jquery.js"></script>
+	<script src="jquery-ui/jquery-ui.js"></script>
+	<script>
+		$( "#slider" ).slider({
+			range: true,
+			values: [ 17, 67 ]
+		});
+		$(".drag").draggable({
+			// snap: true
+		});
+		$(".slot").droppable({
+			accept: ".box",
+			activeClass: "ui-state-highlight",
+			drop: function() {
+			    alert( "dropped" )}
+		});
+	</script>	
+</body>
+</html>
