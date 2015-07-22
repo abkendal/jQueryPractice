@@ -5,12 +5,17 @@
 	<title>Having fun with jQuery</title>
 	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/flickity.css" media="screen">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<h1>The HackerYou Tuber Individual!</h1>
+	<div class="gallery js-flickity" data-flickity-options='{ "cellAlign": "right"}'>
+	  <div class="gallery-cell tuber1"></div>
+	  <div class="gallery-cell tuber2"></div>
+	  <div class="gallery-cell tuber3"></div>
+	</div>
 	<!-- Boxes -->
-	<div class="potato"></div>
 	<div class="hat drag"></div>
 	<div class="hand drag"></div>
 	<div class="hand drag"></div>
@@ -20,8 +25,13 @@
 	<div class="mouth drag"></div>
 
 
+
+	<!-- Scripts -->
+	<script src="js/flickity.pkgd.min.js"></script>
 	<script src="jquery-ui/external/jquery/jquery.js"></script>
 	<script src="jquery-ui/jquery-ui.js"></script>
+
+	<!-- JavaScript -->
 	<script>
 		$( "#slider" ).slider({
 			range: true,
