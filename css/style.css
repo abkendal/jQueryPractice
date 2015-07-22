@@ -1,6 +1,5 @@
-h1 {
-	margin: 0 auto;
-	display: inline-block;
+body h1 {
+	text-align: center;
 }
 .box1 {
 	width: 100px;
@@ -94,6 +93,7 @@ h1 {
 }
 .gallery {
 	height: 600px;
+	/*background: grey;*/
 }
 .gallery-cell {
   width: 100%; /* full width */
